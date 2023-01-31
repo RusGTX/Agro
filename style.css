@@ -114,7 +114,8 @@ nav ul{
 
 nav ul li a{
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
+    
 }
 nav ul li a:hover{
     color:brown;
