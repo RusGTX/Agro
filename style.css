@@ -197,30 +197,29 @@ nav ul li a:hover{
     font-weight: bold;
 }
 
-.another-grid{
+.another-grid{    
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 50px;
     position: relative;
     justify-content: space-between;    
 }
 .another-grid .card{
     width: 150px;
-    height: 250px;
+    height: 180px;
     border: 1px solid red;
     text-align: center;
 }
 .another-grid > .card > .card-img{
     background-color: #fff;
-    height: 180px;
+    height: 120px;
     text-align: center;
-    padding: 10px 0;
-    font-size: 30px;
+    padding: 5px;    
     border: 1px solid rgb(43, 213, 16);
     border-radius: 5px;   
 }
 .another-grid > .card > .card-img > span{
-   font-size: 120px;
+   font-size: 100px;
    color: green;
 }
 /*Production label*/
@@ -295,6 +294,9 @@ nav ul li a:hover{
     .grid-container > div{
         margin-top:-100px ;
     }
+    .another-grid{            
+        justify-content: space-evenly;    
+    }
     
 }
 @media(max-width:420px){
@@ -336,10 +338,27 @@ nav ul li a:hover{
     .production-label{
         padding: 5px;
     }
-    .production-label>h1{
+    .production-label h1, h4{
         font-size:medium;
     }
     .another-grid{
-        flex-direction: column;
+        flex-direction: row;     
+        margin-left: 0px !important;
+        position: relative;
+    }
+    .another-grid .card{
+        width: 100px;
+        height: 150px;        
+    }
+    .another-grid > .card > .card-img{        
+        height: 90px;        
+        padding: 3px; 
+          
+    }
+    .another-grid > .card > .card-img > span{
+       font-size: 75px;      
+    }
+    .another-grid h4{
+        font-size: medium;
     }
 }
