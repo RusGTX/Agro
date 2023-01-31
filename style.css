@@ -147,7 +147,23 @@ nav ul li a:hover{
 .container-fluid .carousel-inner{
     height: 500px;
 }
-
+.carousel-caption{
+    position: relative;
+    top: 150px;
+    margin-left: -600px;    
+}
+.carousel-caption .btn{
+    width:auto;
+    height: 40px;
+    background-color: rgb(215, 125, 14);
+    color: white;
+    font-size: large;
+}
+.carousel-caption .btn:hover{
+    color:rgb(215, 125, 14);
+    background-color: white;
+    
+}
 .carousel-indicators{
     z-index: -999;
 }
@@ -180,31 +196,33 @@ nav ul li a:hover{
     .contact ul li{
         line-height: 1.5em;        
     }
-    .contact-menu #menu:checked ~ ul{
-        left: 0;        
-        transition: ease-in-out 1s;
-    }    
+    
     .contact-menu .menuList{
         position: absolute;
         top: 50px;
         left: -100%;
         background: green;
         flex-direction:column;        
-        width: 100vw;
-        height: 50vh;
+        width: 100vw;               
         z-index: 222;
-        transition: 1s;
+        transition: 1s;        
+        padding: 0px !important;
+        
     }    
+    .contact-menu #menu:checked ~ ul{
+        left: 0;        
+        transition: ease-in-out 1s;
+    } 
     .contact-menu .menuList li{
-        margin: 0 !important;
-        width: 100%;              
+        margin: 0 !important;                     
     }    
     .contact-menu .menuList li a{        
         padding: 0px;        
         text-align: center;
     }
-    .contact-menu .menuList li a:hover{
+    .contact-menu .menuList li a:focus{
         background: #ff0;
+        text-decoration: none;
     }
     .container-fluid .carousel-indicators{
         top: 400px;
@@ -216,8 +234,16 @@ nav ul li a:hover{
         display: inline-table;
         margin: 5px;
         width: 100vw;        
-    }
+    }  
     .container-fluid .carousel-indicators{
         top: 180px;
+    }
+    .carousel-caption{
+        position: relative;
+        top: 0px;
+        margin-left: 0px;    
+    }
+    .carousel-caption .btn{      
+        height: 40px;
     }
 }
