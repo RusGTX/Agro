@@ -206,8 +206,7 @@ nav ul li a:hover{
 }
 .another-grid .card{
     width: 150px;
-    height: 180px;
-    border: 1px solid red;
+    height: 180px;    
     text-align: center;
 }
 .another-grid > .card > .card-img{
@@ -215,7 +214,7 @@ nav ul li a:hover{
     height: 120px;
     text-align: center;
     padding: 5px;    
-    border: 1px solid rgb(43, 213, 16);
+    border: 1px solid grey;
     border-radius: 5px;   
 }
 .another-grid > .card > .card-img > span{
