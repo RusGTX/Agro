@@ -19,7 +19,7 @@ header{
     background-color: white;
     padding: 20px 0;
 }
-.container, .container-menu{
+.contact, .contact-menu{
     position: relative;
     max-width: 960px;
     margin: 0 auto;
@@ -32,7 +32,7 @@ ul{
     justify-content: space-evenly;
     list-style: none;
 }
-.container ul li{
+.contact ul li{
     line-height: 2em;
     font-weight: bolder;    
 }
@@ -62,13 +62,10 @@ a{
 }
 
 /*search btn*/
-.search{
-    vertical-align:sub;
 
-}
 .search input{
     height: 40px;
-    width: 120px;
+    width: auto;
     border-radius: 6px;
     border: 1px solid black;
     text-align:left;
@@ -128,10 +125,10 @@ nav ul li a:hover{
 
 
 /*checkbox & menu style*/
-.container-menu #menu{
+.contact-menu #menu{
     display: none !important;
 }
-.container-menu label{
+.contact-menu label{
     color: #fff;
     font-size: 1.2em;
     padding: 5px 0;
@@ -141,13 +138,22 @@ nav ul li a:hover{
 
 /*CAROUSEL SECTION*/
 
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;    
+}
+.container-fluid .carousel-inner{
+    height: 500px;
+}
 
 .carousel-indicators{
     z-index: -999;
 }
 
 
-
+/*MEDIA*/
 
 @media(max-width:960px){
     .logo img{
@@ -158,23 +164,27 @@ nav ul li a:hover{
         display: block !important;
         margin-left: 40px;       
     }    
-    .container{
+    .contact{
         padding: 0 40px;
-        display:inline-block; 
+        display:inline-block;         
     }
-    .container .street, .email, .phone, .search, .lang{
+    .contact .street, .email, .phone, .search, .lang{
         display: inline-table;
-        margin: 10px;
-        width: auto;        
+        margin: 10px 15px;
+        width: auto;              
     }
-    .container ul li{
+    .contact .search, .lang{
+        position: relative;
+        top: 1em;
+    }    
+    .contact ul li{
         line-height: 1.5em;        
     }
-    .container-menu #menu:checked ~ ul{
+    .contact-menu #menu:checked ~ ul{
         left: 0;        
         transition: ease-in-out 1s;
     }    
-    .container-menu .menuList{
+    .contact-menu .menuList{
         position: absolute;
         top: 50px;
         left: -100%;
@@ -184,25 +194,30 @@ nav ul li a:hover{
         height: 50vh;
         z-index: 222;
         transition: 1s;
-    }
-    
-    .container-menu .menuList li{
+    }    
+    .contact-menu .menuList li{
         margin: 0 !important;
         width: 100%;              
-    }
-    
-    .container-menu .menuList li a{        
+    }    
+    .contact-menu .menuList li a{        
         padding: 0px;        
         text-align: center;
     }
-    .container-menu .menuList li a:hover{
+    .contact-menu .menuList li a:hover{
         background: #ff0;
     }
+    .container-fluid .carousel-indicators{
+        top: 400px;
+    }
+    
 }
 @media(max-width:420px){
-    .container .street, .email, .phone, .search, .lang{
+    .contact .street, .email, .phone, .search, .lang{
         display: inline-table;
         margin: 5px;
         width: 100vw;        
+    }
+    .container-fluid .carousel-indicators{
+        top: 180px;
     }
 }
