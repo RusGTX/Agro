@@ -204,15 +204,25 @@ nav ul li a:hover{
     position: relative;
     justify-content: space-between;    
 }
-.another-grid > div{
+.another-grid .card{
+    width: 150px;
+    height: 250px;
+    border: 1px solid red;
+    text-align: center;
+}
+.another-grid > .card > .card-img{
     background-color: #fff;
+    height: 180px;
     text-align: center;
     padding: 10px 0;
     font-size: 30px;
-    border: 1px solid lightgrey;
+    border: 1px solid rgb(43, 213, 16);
     border-radius: 5px;   
 }
-
+.another-grid > .card > .card-img > span{
+   font-size: 120px;
+   color: green;
+}
 /*Production label*/
 .production-label{
     width: 60%;
