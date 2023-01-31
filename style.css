@@ -146,12 +146,12 @@ nav ul li a:hover{
 }
 .container-fluid .carousel-inner{
     height: 500px;
+   
 }
 .carousel-caption{
     position: relative;
     top: 50px;
-    text-align: left !important;
-    
+    text-align: left !important;    
 }
 .carousel-caption h1{
     color: black;
@@ -173,6 +173,57 @@ nav ul li a:hover{
 }
 
 
+
+/*PRODUCTION GRID*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;    
+    padding:0 50px;
+    z-index: 111;
+    position: relative;
+}
+.grid-container > div{
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    margin-top: -50px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;    
+}
+.grid-container > div >h1{
+    color: green;
+    font-weight: bold;
+}
+
+.another-grid{
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px;
+    position: relative;
+    justify-content: space-between;    
+}
+.another-grid > div{
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;   
+}
+
+/*Production label*/
+.production-label{
+    width: 60%;
+    margin: auto;
+    text-align: center;   
+    padding: 30px;
+}
+.production-label>h1{
+    font-weight: bolder;
+    color: rgb(215, 125, 14);
+}
 /*MEDIA*/
 
 @media(max-width:960px){
@@ -231,6 +282,9 @@ nav ul li a:hover{
     .container-fluid .carousel-indicators{
         top: 400px;
     }
+    .grid-container > div{
+        margin-top:-100px ;
+    }
     
 }
 @media(max-width:420px){
@@ -251,7 +305,31 @@ nav ul li a:hover{
         font-size:medium;
     }
     .carousel-caption .btn{      
-        height: 40px;
-        
+        height: 40px;       
+    }
+    .container-fluid .carousel-inner {
+        height: 220px;
+        margin-bottom: 0px !important;
+    }
+      
+    .carousel-indicators{
+        display: none;
+    }
+    .grid-container{        
+        flex-direction: row;
+        padding:5px;    
+    }
+    .grid-container > div{
+        margin-top: 0;
+        padding: 5px;
+    }    
+    .production-label{
+        padding: 5px;
+    }
+    .production-label>h1{
+        font-size:medium;
+    }
+    .another-grid{
+        flex-direction: column;
     }
 }
