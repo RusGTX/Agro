@@ -149,20 +149,24 @@ nav ul li a:hover{
 }
 .carousel-caption{
     position: relative;
-    top: 150px;
-    margin-left: -600px;    
+    top: 50px;
+    text-align: left !important;
+    
+}
+.carousel-caption h1{
+    color: black;
+    font-weight: bold;
 }
 .carousel-caption .btn{
     width:auto;
     height: 40px;
     background-color: rgb(215, 125, 14);
     color: white;
-    font-size: large;
+    font-size: large;   
 }
 .carousel-caption .btn:hover{
     color:rgb(215, 125, 14);
-    background-color: white;
-    
+    background-color: white;        
 }
 .carousel-indicators{
     z-index: -999;
@@ -243,7 +247,11 @@ nav ul li a:hover{
         top: 0px;
         margin-left: 0px;    
     }
+    .carousel-caption h1{
+        font-size:medium;
+    }
     .carousel-caption .btn{      
         height: 40px;
+        
     }
 }
