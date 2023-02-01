@@ -8,7 +8,10 @@
     font-family: Akrobat;
     src: url(fonts/Akrobat.woff);
 }
-
+:root{
+    --elemColor:rgb(54, 164, 54);
+    --btnColor:rgb(215, 125, 14);
+}
 /*HEADER 1ST BLOCK*/
 
 header{
@@ -42,6 +45,7 @@ a{
     text-decoration: none;
     font-size: 1.2em;    
 }
+
 /*logo*/
 .logo img{
     position: relative;
@@ -74,7 +78,7 @@ a{
 }
 .search input:focus{
     outline: none !important;
-    border: 1px solid rgb(54, 164, 54);
+    border: 1px solid var(--elemColor);
 }
 /*lang button*/
 
@@ -92,13 +96,13 @@ a{
     border-radius: 5px;
 }
 .lang li button:hover{   
-    border: 2px solid rgb(54, 164, 54);
+    border: 2px solid var(--elemColor);
 }
 
 /*HEADER 2ND BLOCK*/
 
 nav{
-    background-color: rgb(54, 164, 54);
+    background-color: var(--elemColor);
     position: relative;
     height: 50px;
     line-height: 3em;
@@ -115,11 +119,11 @@ nav ul{
 nav ul li a{
     color: white;
     font-size: 1.2em;
-    
+    transition: .3s;    
 }
-nav ul li a:hover{
-    color:brown;
-    text-decoration: none;
+nav ul li a:hover{    
+    text-decoration: none;       
+    color: rgb(0, 0, 0);
 }
 
 
@@ -162,12 +166,12 @@ nav ul li a:hover{
 .carousel-caption .btn{
     width:auto;
     height: 40px;
-    background-color: rgb(215, 125, 14);
+    background-color: var(--btnColor);
     color: white;
     font-size: large;   
 }
 .carousel-caption .btn:hover{
-    color:rgb(215, 125, 14);
+    color:var(--btnColor);
     background-color: white;        
 }
 .carousel-indicators{
@@ -195,7 +199,7 @@ nav ul li a:hover{
     border-radius: 5px;    
 }
 .grid-container > div >h1{
-    color: rgb(54, 164, 54);
+    color: var(--elemColor);
     font-weight: bold;
 }
 
@@ -221,8 +225,14 @@ nav ul li a:hover{
 }
 .another-grid > .card > .card-img > span{
    font-size: 100px;
-   color: rgb(54, 164, 54);
+   color: var(--elemColor);
+   transition: .3s;
 }
+.another-grid > .card > .card-img > span:hover{
+    font-size: 105px;   
+    color: var(--btnColor);
+    cursor: pointer;
+ }
 /*Production label*/
 .production-label{
     width: 60%;
@@ -232,8 +242,59 @@ nav ul li a:hover{
 }
 .production-label>h1{
     font-weight: bolder;
-    color: rgb(215, 125, 14);
+    color: var(--btnColor);
 }
+
+
+
+
+/*----------4 Reasons-------------*/
+
+
+.wrapper{
+    background: url("images/3rd_block.jpg") left center no-repeat;    
+    width: 100%;
+    height: 600px;
+}
+.wrapper .box{
+    padding: 5px;
+    border: 2px solid #ff0;
+    width: 80%;
+    height: 80%;    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+  
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+
+
 /*MEDIA*/
 
 @media(max-width:960px){
@@ -266,7 +327,7 @@ nav ul li a:hover{
         position: absolute;
         top: 50px;
         left: -100%;
-        background: rgb(54, 164, 54);
+        background: var(--elemColor);
         flex-direction:column;        
         width: 100vw;               
         z-index: 222;
@@ -302,9 +363,11 @@ nav ul li a:hover{
         justify-content: space-evenly; 
         padding: 0px 50px;          
     }
+
+    
     
 }
-@media(max-width:420px){
+@media(max-width:428px){
     .contact .street, .email, .phone, .search, .lang{
         display: inline-table;
         margin: 5px;
@@ -334,9 +397,9 @@ nav ul li a:hover{
     }
     
     .grid-container{
-        grid-template-columns: 150px 200px;
-        padding: 10px; 
-        gap: 3px; 
+        grid-template-columns: auto 190px;
+        padding: 5px; 
+        gap: 5px; 
     }
     .grid-container > div{
         margin-top: 0;
@@ -370,5 +433,9 @@ nav ul li a:hover{
     }
     .another-grid h4{
         font-size: medium;
+    }
+
+    [class*="col-"] {
+        width: 100%;
     }
 }
