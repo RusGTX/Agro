@@ -10,7 +10,7 @@
     src: url(fonts/Akrobat.woff);
 }
 :root{
-    --elemColor:rgb(54, 164, 54);
+    --elemColor:#009846;
     --btnColor:rgb(215, 125, 14);
 }
 p{
@@ -380,7 +380,7 @@ nav ul li a:hover{
     flex-basis:40%;                
 }
 .wrap-small{
-    background-color: green;
+    background-color: var(--elemColor);
 }
 
 /*------SMALL WRAPPER-----------*/
@@ -399,7 +399,7 @@ nav ul li a:hover{
 }
 .small-col{
     flex: 1;
-    border: 1px solid green;
+    border: 1px solid var(--elemColor);
     margin: 1px;
     padding: 10px;    
     transition: 0.3s;
@@ -408,7 +408,7 @@ nav ul li a:hover{
     color: #fff;
 }
 .button{
-    background-color: green;
+    background-color: var(--elemColor);
     border: 2px solid white;
     color: #fff;
     text-align: center;
@@ -469,7 +469,7 @@ nav ul li a:hover{
 
 /*FOOTER*/
 footer{
-    background: green;
+    background: var(--elemColor);
     padding: 25px;
     width: 100%;
 } 
@@ -550,6 +550,9 @@ textarea{
 /*MEDIA*/
 
 @media(max-width:960px){
+    .footer-columns .footer-col:nth-child(2),.footer-col:nth-child(4){
+        text-align: right;
+     }     
     .footer-columns .footer-col{                                     
         flex-basis: 40%;
         padding: 0;        
@@ -623,10 +626,15 @@ textarea{
 }
 
 @media(max-width:680px) {
+
+    .footer-columns .footer-col:nth-child(2),.footer-col:nth-child(4){
+        text-align: left;
+     } 
+
     .footer-columns .footer-col{
         margin: 0 0 2px 0;                             
-        flex-basis: 100%;
-    }
+        flex-basis: 100%;        
+    }  
     
     .cert-columns .cert-column{
         flex-basis: 30%;
