@@ -37,8 +37,9 @@ ul{
 }
 .contact ul li{
     line-height: 2em;
-    font-weight: bolder; 
+    font-weight: normal; 
     letter-spacing: 1.5px;   
+    color: #5c5757;
 }
 a{
     display: block;
